@@ -58,6 +58,8 @@
 -- -- 3.  Oops! Someone spelled Krusty The Clown's name wrong! Change it to reflect the proper spelling (Crusty should be Krusty).
 
 -- UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
+-- rather use id for where condition!
+-- UPDATE people SET name = 'Krusty the Clown' WHERE id = 13;
 
 -- SELECT name FROM people;
 
@@ -86,7 +88,7 @@
 
 -- -- 4.  Return ONLY Homer Simpson's name from the 'people' table.
 
--- SELECT name FROM people WHERE name = 'Homer Simpson';
+-- SELECT name FROM people WHERE id = 1;
 
 -- -- result -->
 
@@ -216,6 +218,7 @@
 
 -- -- 9.  The cinema would like to make the Iron Man movies a triple billing. Find out the show time of "Iron Man 2" and set the show time of "Iron Man 3" to start two hours later.
 
+-- SELECT show_time FROM movies WHERE title = 'Iron Man 2'; -- to find out show time!
 -- UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';
 -- SELECT * FROM movies;
 
